@@ -1,9 +1,12 @@
 # pat2-subtask-1
 
+# What is Morse code
 # Morse code is a method of communication that represents letters, numbers, and punctuation using a series of short and long signals called dots(.) and dashes(-). it was widely used for telegraph communication and remains an important part of communication history.
 
+# The history of why Morse code was created
 # Morse code was developed in the 1830s and 1840s by Samuel Morse and Alfred Vail to support the use of the electrical telegraph. Before telegraphs, long-distance communication was slow and depended on physical transportation of messages. Morse code allowed messages to be transmitted quickly over long distances through electrical signals sent along telegraph wires.
 
+# How Morse code system works
 # In Morse code, each letter and number is assigned a unique pattern of dots and dashes.
 #Examples:
 # A = .-
