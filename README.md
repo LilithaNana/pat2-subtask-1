@@ -66,7 +66,7 @@ int main() {
             if (!fullMorse.empty())
                 fullMorse += "   ";   // Three spaces between letters
 
-            fullMorse += morseCode[upperChar];
+            fullMorse += morseCode[ch];
         }
     }
 
