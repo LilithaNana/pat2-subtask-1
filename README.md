@@ -30,7 +30,6 @@ O = ---
 #include <iostream>
 #include <map>
 #include <string>
-#include <cctype>
 
 using namespace std;
 
@@ -52,21 +51,18 @@ int main() {
     string message;
     string fullMorse = "";
 
-    cout << "Enter a short message: ";
+    cout << "Enter a short message (uppercase A - Z only: ";
     getline(cin, message);
 
-    cout << "\nMorse Code Translation:\n";
+    cout <<"\nLetter-by-Letter Translation:\n" ;
 
     for (char ch : message) {
-        ch upperChar = toupper(ch);
 
         if (ch == ' ') {
-            continue:
-            
-         if (morseCode.find(upperChar) != morseCode.end())
-        {
-            cout << upperChar << ": " << morseCode[upperChar] << endl;
+            continues;
 
+        cout << ch << ": " << morseCode[ch] << endl;
+            
             if (!fullMorse.empty())
                 fullMorse += "   ";   // Three spaces between letters
 
