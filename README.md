@@ -51,15 +51,16 @@ int main() {
     string message;
     string fullMorse = "";
 
-    cout << "Enter a short message (uppercase A - Z only: ";
+    cout << "Enter a short message: ";
     getline(cin, message);
 
     cout <<"\nLetter-by-Letter Translation:\n" ;
 
-    for (char ch : message) {
-
-        if (ch == ' ') {
-            continues;
+    for (char ch : message) 
+    {
+        if (isalpha(ch)) 
+        {
+            ch = toupper(ch);
 
         cout << ch << ": " << morseCode[ch] << endl;
             
