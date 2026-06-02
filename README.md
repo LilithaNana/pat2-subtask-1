@@ -45,14 +45,12 @@ int main() {
         {'P', ".--."}, {'Q', "--.-"}, {'R', ".-."},
         {'S', "..."}, {'T', "-"}, {'U', "..-"},
         {'V', "...-"}, {'W', ".--"}, {'X', "-..-"},
-        {'Y', "-.--"}, {'Z', "--.."},
-        {'0', "-----"}, {'1', ".----"}, {'2', "..---"},
-        {'3', "...--"}, {'4', "....-"}, {'5', "....."},
-        {'6', "-...."}, {'7', "--..."}, {'8', "---.."},
-        {'9', "----."}
+        {'Y', "-.--"}, {'Z', "--.."}
+        
     };
 
     string message;
+    string fullMorse = "";
 
     cout << "Enter a short message: ";
     getline(cin, message);
@@ -60,17 +58,24 @@ int main() {
     cout << "\nMorse Code Translation:\n";
 
     for (char ch : message) {
-        ch = toupper(ch);
+        ch upperChar = toupper(ch);
 
         if (ch == ' ') {
-            cout << "/ "; // Word separator
-        }
-        else if (morseCode.find(ch) != morseCode.end()) {
-            cout << morseCode[ch] << " ";
+            continue:
+            
+         if (morseCode.find(upperChar) != morseCode.end())
+        {
+            cout << upperChar << ": " << morseCode[upperChar] << endl;
+
+            if (!fullMorse.empty())
+                fullMorse += "   ";   // Three spaces between letters
+
+            fullMorse += morseCode[upperChar];
         }
     }
 
-    cout << endl;
+    cout << "\nFull Morse Code Message:\n";
+    cout << fullMorse << endl;
 
     return 0;
 }
