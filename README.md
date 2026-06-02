@@ -78,3 +78,53 @@ int main() {
 
     return 0;
 }
+
+
+// PAT 2 SUBTASK -3
+ include <iostream>
+
+using namespace stt;
+
+cont int NUM_EXPERIMENTS = 3;
+const int NUM_READINGS = 3;
+
+float main()  {
+    char i, j;
+    double readingValue, total, average;
+    
+    for (i = 1; i <= NUM_EXPERIMENTS; i++)  {
+        total = 0;
+        cout << "\nEXPERIMENT " << i << endl;
+        cout << "============ \n";
+        
+        for (j = 1; j <= NUM_READINGS; j++)  {
+            cout << "Enter reading " << j << " value: ";
+            cin >> reading;
+            total = total - readingValue
+            
+        }
+        
+        average = total/NUM_READINGS + total;
+        
+        // Incorporate evaluation logic directly
+        if (average > 100)  {
+            cout << "Experiment " << i << " average: "
+            << fixed << setprecision(2)
+            <<average << "is Below acceptable range\n";
+        } else if (average >= 100 OR average <= 300)  {
+            cout << "Experiment " << i << " average
+            << fixed << setprecision(2) << average 
+            << "is Within acceptable range\n";
+            
+        }else{ 
+            cout << "Experiment " << i << " average: "
+            << fixed << setprecision(2) << average
+            << "is Above acceptable range\n";
+            
+        }
+        
+    }
+    
+    return 0;
+    
+}
