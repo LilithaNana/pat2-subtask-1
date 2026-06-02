@@ -1,4 +1,4 @@
-# pat2-subtask-1
+// pat2-subtask-1
 
 # What is Morse code
 # Morse code is a communication system that uses a combination of dots (short signals) and dashes (long signals) to represent letters, numbers, and symbols. It was developed in the 1830s and 1840s by Samuel Morse and was mainly used for telegraph communication. Messages are sent by transmitting these signals through sound, light, radio waves, or electrical pulses. For example, the distress signal SOS is represented as ••• ––– •••. Morse code was one of the first methods of long-distance communication and played an important role in maritime, military, and emergency communications. Although it is not commonly used today, it remains an important part of the history of communication technology and is still used by some amateur radio operators.
@@ -27,6 +27,8 @@
 O = ---
 # Combined: •••• • •−•• •−•• −−-
 
+
+// PAT 2 SUBTASK-2
 #include <iostream>
 #include <map>
 #include <string>
