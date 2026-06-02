@@ -26,3 +26,54 @@
 # L = ._..
 O = ---
 # Combined: •••• • •−•• •−•• −−-
+
+#include <iostream>
+#include <string>
+#include <map>
+#include <cctype>
+
+using namespace std;
+
+int main()
+{
+    map<char, string> morseCode = {
+        {'A', ".-"}, {'B', "-..."}, {'C', "-.-."},
+        {'D', "-.."}, {'E', "."}, {'F', "..-."},
+        {'G', "--."}, {'H', "...."}, {'I', ".."},
+        {'J', ".---"}, {'K', "-.-"}, {'L', ".-.."},
+        {'M', "--"}, {'N', "-."}, {'O', "---"},
+        {'P', ".--."}, {'Q', "--.-"}, {'R', ".-."},
+        {'S', "..."}, {'T', "-"}, {'U', "..-"},
+        {'V', "...-"}, {'W', ".--"}, {'X', "-..-"},
+        {'Y', "-.--"}, {'Z', "--.."}
+    };
+
+    string message;
+    string fullMorse = "";
+
+    cout << "Enter a short message: ";
+    getline(cin, message);
+
+    cout << "\nLetter-by-Letter Translation:\n";
+
+    for (char ch : message)
+    {
+        if (ch == ' ')
+            continue;
+
+        // Convert lowercase letters to uppercase
+        ch = toupper(ch);
+
+        cout << ch << ": " << morseCode[ch] << endl;
+
+        if (!fullMorse.empty())
+            fullMorse += "   ";  // Three spaces between letters
+
+        fullMorse += morseCode[ch];
+    }
+
+    cout << "\nFull Morse Code Message:\n";
+    cout << fullMorse << endl;
+
+    return 0;
+}
