@@ -28,14 +28,14 @@ O = ---
 # Combined: •••• • •−•• •−•• −−-
 
 #include <iostream>
-#include <string>
 #include <map>
+#include <string>
 #include <cctype>
 
 using namespace std;
 
-int main()
-{
+int main() {
+    // Morse code dictionary
     map<char, string> morseCode = {
         {'A', ".-"}, {'B', "-..."}, {'C', "-.-."},
         {'D', "-.."}, {'E', "."}, {'F', "..-."},
@@ -49,32 +49,24 @@ int main()
     };
 
     string message;
-    string fullMorse = "";
 
     cout << "Enter a short message: ";
     getline(cin, message);
 
-    cout << "\nLetter-by-Letter Translation:\n";
+    cout << "Morse Code: ";
 
-    for (char ch : message)
-    {
-        // Only process letters
-        if (isalpha(ch))
-        {
-            ch = toupper(ch);
+    for (char ch : message) {
+        ch = toupper(ch);
 
-            cout << ch << ": " << morseCode[ch] << endl;
-
-            if (!fullMorse.empty())
-                fullMorse += "   ";   // Three spaces between letters
-
-            fullMorse += morseCode[ch];
+        if (ch == ' ') {
+            cout << "/ "; // Word separator
+        }
+        else if (morseCode.find(ch) != morseCode.end()) {
+            cout << morseCode[ch] << " ";
         }
     }
 
-    cout << "\nFull Morse Code Message:\n";
-    cout << fullMorse << endl;
+    cout << endl;
 
     return 0;
 }
-   
