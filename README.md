@@ -58,24 +58,15 @@ int main()
 
     for (char ch : message)
     {
-        // Ignore spaces
-        if (ch == ' ')
-            continue;
-
-        // Ignore non-alphanumeric characters
-        if (!isalnum(ch))
-            continue;
-
-        // Convert lowercase letters to uppercase
-        ch = toupper(ch);
-
-        // Only process letters A-Z
-        if (morseCode.find(ch) != morseCode.end())
+        // Only process letters
+        if (isalpha(ch))
         {
+            ch = toupper(ch);
+
             cout << ch << ": " << morseCode[ch] << endl;
 
             if (!fullMorse.empty())
-                fullMorse += "   ";  // Three spaces between letters
+                fullMorse += "   ";   // Three spaces between letters
 
             fullMorse += morseCode[ch];
         }
@@ -86,3 +77,4 @@ int main()
 
     return 0;
 }
+   
