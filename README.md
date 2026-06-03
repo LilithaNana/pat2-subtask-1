@@ -86,10 +86,10 @@ int main() {
 
 using namespace std;
 
-cont int NUM_EXPERIMENTS = 3;
-const int NUM_READINGS = 3;
+const int NUM_EXPERIMENTS = 4;
+const int NUM_READINGS = 4;
 
-float main()  {
+int main()  {
     char i, j;
     double readingValue, total, average;
     
@@ -101,7 +101,7 @@ float main()  {
         for (j = 1; j <= NUM_READINGS; j++)  {
             cout << "Enter reading " << j << " value: ";
             cin >> readingValue;
-            total = total + readingValue   
+            total = total + readingValue;   
         }
         
         average = total/NUM_READINGS;
