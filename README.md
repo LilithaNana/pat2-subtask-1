@@ -87,7 +87,7 @@ int main() {
 using namespace std;
 
 const int NUM_EXPERIMENTS = 4;
-const int NUM_READINGS = 4;
+const int NUM_READINGS = 3;
 
 int main()  {
     char i, j;
